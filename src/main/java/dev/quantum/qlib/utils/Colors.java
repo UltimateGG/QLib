@@ -1,4 +1,4 @@
-package dev.quantum.qlib;
+package dev.quantum.qlib.utils;
 
 import java.awt.*;
 

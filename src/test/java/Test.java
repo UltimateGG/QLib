@@ -1,10 +1,14 @@
-import dev.quantum.qlib.NumberUtils;
-import dev.quantum.qlib.QLib;
+import dev.quantum.qlib.bot.QBot;
+import dev.quantum.qlib.bot.features.AutoRole;
+import dev.quantum.qlib.bot.features.WelcomeMessages;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Dev Mode: " + QLib.DEVELOPMENT_MODE);
-        double num = 6332858585.2664;
-        System.out.println(NumberUtils.COMMA_NUMBER_SHOWPOINT.format(num));
+        QBot bot = new QBot(
+                "QuantumBot",
+                System.getProperty("quantum.token"),
+                new WelcomeMessages(true, true),
+                new AutoRole("Member")
+        );
     }
 }
